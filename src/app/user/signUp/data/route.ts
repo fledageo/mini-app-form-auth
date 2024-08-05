@@ -30,3 +30,4 @@ export async function POST(req: Request, res: Response) {
         return Response.json({status:"error",message:"User with this email already registred"})
     }
 }
+

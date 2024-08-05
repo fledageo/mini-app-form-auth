@@ -5,8 +5,7 @@ import "./style.css"
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { ISignUpResponse } from '@/app/lib/types';
-import { redirect, useRouter } from 'next/navigation';
-// import { getUserByEmail } from '../../api';
+import { useRouter } from 'next/navigation';
 
 
 
@@ -36,7 +35,7 @@ export default function Form() {
 
     const handleOnSubmit = async (data: FieldValues) => {
 
-        const response = await fetch("signUp/api", {
+        const response = await fetch("signUp/data", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
@@ -47,7 +46,7 @@ export default function Form() {
         if(result.status == "error"){
             setError(result) 
         }else{
-            router.push(`/signIn`)   
+            router.push(`signIn`)   
             setError(null)
         }
     }

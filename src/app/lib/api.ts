@@ -29,3 +29,9 @@ export const getUserById = (id:string):IUser => {
         WHERE id='${id}'    
     `).get() as IUser
 }
+export const getUserByEmail = (email:string) => {
+    return db.prepare(`
+        SELECT * FROM users 
+        WHERE email='${email}'    
+    `).get() as IUser | undefined
+}

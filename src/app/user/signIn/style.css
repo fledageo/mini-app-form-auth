@@ -14,3 +14,11 @@
     flex-direction: column;
     align-items: center;
 }
+.help-text{
+    color: red;
+    font-size: 12px;
+}
+.input-helptext-block{
+    width: 100%;
+    height: 60px;
+}

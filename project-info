@@ -1,0 +1,5 @@
+use-hook-form
+yup - validation
+nanoid - id generator
+bcrypt - password hashing
+lucia - auth
