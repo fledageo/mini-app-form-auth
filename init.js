@@ -1,21 +1,22 @@
 const Database = require("better-sqlite3")
-const db = new Database("auth.db")
+const authDB = new Database("auth.db")
 
-db.exec(`
+
+authDB.exec(`
     CREATE TABLE IF NOT EXISTS users(
         id TEXT PRIMARY KEY,
         name TEXT,
         surname TEXT,
         email TEXT,
-        password TEXT        
-    )    
+        password TEXT
+    )
 `)
 
-db.exec(`
-    CREATE TABLE session (
+authDB.exec(`
+    CREATE TABLE IF NOT EXISTS session (
     id TEXT NOT NULL PRIMARY KEY,
     expires_at INTEGER NOT NULL,
     user_id TEXT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES user(id)
-)    
-`)
+    FOREIGN KEY (user_id) REFERENCES users(id)
+)`
+)

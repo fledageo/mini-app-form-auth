@@ -4,6 +4,7 @@ import "./style.css"
 import { FieldValues, useForm } from 'react-hook-form'
 import { ISignInResponse } from '@/app/lib/types'
 import { useRouter } from 'next/navigation'
+import { createAuthSession } from '@/app/lib/auth'
 
 export default function Page() {
   const { register, handleSubmit, formState: { errors } } = useForm()
@@ -19,7 +20,7 @@ export default function Page() {
     if (result.error) {
       setInvalidField(result)
     }else{
-      router.push(`profile/${result.profileId}`)
+      router.push(`profile`)
     }
   }
   // onchange -->  remove error text 
