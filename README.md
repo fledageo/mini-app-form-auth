@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 This project is a comprehensive Registration and Login system, built with a focus on security, scalability, and developer experience. It leverages a modern tech stack, ensuring a smooth and efficient authentication process.
 
-Features
+## Features
 TypeScript: Strongly typed programming with TypeScript, enhancing code quality, maintainability, and developer productivity.
 
 React Hook Form: Efficient form management with React Hook Form, offering easy state management and performance optimization.
