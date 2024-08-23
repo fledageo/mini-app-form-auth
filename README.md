@@ -1,7 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 
-Registration and Login Form
+## Registration and Login Form
+
 This project is a comprehensive Registration and Login system, built with a focus on security, scalability, and developer experience. It leverages a modern tech stack, ensuring a smooth and efficient authentication process.
 
 Features
