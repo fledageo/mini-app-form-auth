@@ -2,32 +2,6 @@ import { BetterSqlite3Adapter } from "@lucia-auth/adapter-sqlite";
 import Database from "better-sqlite3"
 import { Lucia, TimeSpan } from "lucia";
 import { cookies } from "next/headers";
-// const db = new Database("auth.db")
-
-// const adapter = new BetterSqlite3Adapter(db,{
-//     user:"users",
-//     session:"session"
-// })
-
-// export const lucia = new Lucia(adapter, {
-//     sessionExpiresIn:new TimeSpan(30,"s"),
-// 	sessionCookie: {
-//         expires:false,
-// 		attributes: {
-// 			secure: process.env.NODE_ENV === "production"
-// 		}
-// 	}
-// });
-
-// export const createAuthSession = async (id:string) => {
-//     const session = await lucia.createSession(id,{})
-//     const sessionCookie = lucia.createSessionCookie(session.id)
-//     cookies().set(
-//         sessionCookie.name,
-//         sessionCookie.value,
-//         sessionCookie.attributes
-//     )
-// }
 
 const db = new Database("auth.db");
 
@@ -37,7 +11,7 @@ const adapter = new BetterSqlite3Adapter(db, {
 });
 
 export const lucia = new Lucia(adapter, {
-    sessionExpiresIn: new TimeSpan(30, 's'),
+    sessionExpiresIn: new TimeSpan(60, 's'),
     sessionCookie: {
         expires: false,
         attributes: {

@@ -1,5 +1,27 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+
+Registration and Login Form
+This project is a comprehensive Registration and Login system, built with a focus on security, scalability, and developer experience. It leverages a modern tech stack, ensuring a smooth and efficient authentication process.
+
+Features
+TypeScript: Strongly typed programming with TypeScript, enhancing code quality, maintainability, and developer productivity.
+
+React Hook Form: Efficient form management with React Hook Form, offering easy state management and performance optimization.
+
+Yup Validation: Integrated Yup schema validation ensures all form inputs meet the required standards before submission.
+
+Lucia Auth: Secure authentication with Lucia, featuring a session expiration time set to 60 seconds for enhanced security.
+
+Better SQLite3 Database: Fast and reliable database management using Better SQLite3, providing seamless data storage and retrieval.
+
+bcrypt: Passwords are hashed using bcrypt, ensuring secure storage of sensitive user information.
+
+Nano ID: Generating unique identifiers with Nano ID, making sure every user session and data entry is distinct and secure.
+
+
+
+
 ## Getting Started
 
 First, run the development server:
